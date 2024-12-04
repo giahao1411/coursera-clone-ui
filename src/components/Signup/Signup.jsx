@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 
-const Login = () => {
+const Signup = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [responseMessage, setResponseMessage] = useState("");
     const [messageType, setMessageType] = useState("");
 
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -14,15 +15,15 @@ const Login = () => {
         setShowPassword((prevState) => !prevState);
     };
 
-    const handleLogin = (e) => {
+    const handleSignup = (e) => {
         e.preventDefault();
 
-        if (!email || !password) {
+        if (!name || !email || !password) {
             setMessageType("error");
             setResponseMessage("Please fill all fields.");
         } else {
             setMessageType("success");
-            setResponseMessage("Login successfully!");
+            setResponseMessage("Sign up complete! Waiting for redirect...");
         }
 
         setTimeout(() => {
@@ -34,7 +35,7 @@ const Login = () => {
     return (
         <div className="login-form max-w-md mx-auto border-2 p-10 mt-20">
             <h2 className="text-center text-3xl text-black-500 mt-5 mb-5">
-                Welcome back
+                Sign up
             </h2>
 
             {responseMessage && (
@@ -50,7 +51,23 @@ const Login = () => {
             )}
 
             <div className="form-container">
-                <form className="space-y-4" onSubmit={handleLogin}>
+                <form className="space-y-4" onSubmit={handleSignup}>
+                    <div>
+                        <label
+                            htmlFor="name"
+                            className="block text-lg font-medium text-gray-700"
+                        >
+                            Full Name
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Enter your full name"
+                            id="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                        />
+                    </div>
                     <div>
                         <label
                             htmlFor="email"
@@ -91,16 +108,11 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="forgot-password text-blue-500 underline">
-                        <Link to="/account/forgot-password">
-                            Forgot password?
-                        </Link>
-                    </div>
                     <button
                         type="submit"
                         className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
                     >
-                        Login
+                        Join for free
                     </button>
                 </form>
 
@@ -130,12 +142,12 @@ const Login = () => {
                 </div>
 
                 <p className="text-center text-gray-400 mt-8">
-                    New to Coursera?{" "}
+                    Already on Coursera?{" "}
                     <Link
-                        to="/account/signup"
+                        to="/account/login"
                         className="text-blue-500 underline"
                     >
-                        Sign up
+                        Log in
                     </Link>
                 </p>
             </div>
@@ -143,4 +155,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;
