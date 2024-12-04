@@ -6,8 +6,8 @@ import { CiSearch } from "react-icons/ci";
 const Header = () => {
     return (
         <header className="bg-white shadow-md">
-            <div className="max-w-7xl mx-auto px-4 py-5 flex items-center justify-between">
-                <div className="flex items-center">
+            <div className="max-w-9xl mx-auto px-4 py-5 flex items-center justify-between">
+                <div className="flex items-center ml-10">
                     {/* Logo */}
                     <NavLink
                         to="/"
@@ -19,7 +19,7 @@ const Header = () => {
 
                     <div className="flex items-center space-x-4 ml-4">
                         <div className="relative">
-                            <button className="border border-blue-700 text-blue-700 rounded-md py-2 px-5 flex items-center justity-center">
+                            <button className="border border-blue-700 text-blue-700 rounded-md py-2 px-5 flex items-center justify-center">
                                 Explore
                                 <AiOutlineDown className="ml-2" />
                             </button>
@@ -38,7 +38,7 @@ const Header = () => {
                 </div>
 
                 {/* Navigation links */}
-                <div className="flex justify-end items-center space-x-8">
+                <div className="flex items-center space-x-7 mr-10">
                     <NavLink
                         to="/careers"
                         className="text-gray-600 hover:text-blue-600"
