@@ -2,11 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import AccountRoutes from "./routes/AccountRoutes";
+import HomeRoutes from "./routes/HomeRoutes";
 
 function App() {
     return (
         <Router>
-            <Routes>{AccountRoutes}</Routes>
+            <Routes>
+                {AccountRoutes}
+                {HomeRoutes}
+            </Routes>
         </Router>
     );
 }
