@@ -9,6 +9,8 @@ import SearchResult from "../components/Main/SearchResult";
 import MyLearning from "../components/Main/MyLearning";
 import UserProfile from "../components/Main/UserProfile";
 import UserSetting from "../components/Main/UserSetting";
+import Purchases from "../components/Main/Purchases";
+import Checkout from "../components/Main/Checkout";
 
 const HomeRoutes = () => {
     const [user, setUser] = useState("");
@@ -32,8 +34,10 @@ const HomeRoutes = () => {
                 <Route path="/my-learning" element={<MyLearning />} />
                 <Route path="/profile" element={<UserProfile />} />
                 <Route path="/setting" element={<UserSetting />} />
-            </Route>
-        </Routes>
+                <Route path="/purchases" element={<Purchases />} />
+                <Route path="/check-out" element={<Checkout />} />
+            </Route >
+        </Routes >
     );
 };
 

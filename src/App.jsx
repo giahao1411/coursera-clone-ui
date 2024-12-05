@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import AccountRoutes from "./routes/AccountRoutes";
 import HomeRoutes from "./routes/HomeRoutes";
+import HelpCentreRoute from "./routes/HelpCentreRoute.jsx";
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <Routes>
                 {AccountRoutes}
                 <Route path="/*" element={<HomeRoutes />} />
+                {HelpCentreRoute}
             </Routes>
         </Router>
     );

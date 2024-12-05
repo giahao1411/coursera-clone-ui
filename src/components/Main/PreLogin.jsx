@@ -14,7 +14,10 @@ const PreLogin = () => {
                     courses, Professional Certificates, and degrees from
                     world-class universities and companies.
                 </p>
-                <NavLink to="/account/signup" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">
+                <NavLink
+                    to="/account/signup"
+                    className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700"
+                >
                     Join for free
                 </NavLink>
             </div>

@@ -52,7 +52,7 @@ const Header = () => {
 
     return (
         <header className="bg-white shadow-md">
-            <div className="max-w-9xl mx-auto px-4 py-5 flex items-center justify-between">
+            <div className="max-w-8xl px-4 py-5 flex items-center justify-between">
                 <div className="flex items-center ml-10">
                     {/* Logo */}
                     <NavLink
@@ -127,7 +127,9 @@ const Header = () => {
                     </div>
                 ) : (
                     <div className="flex items-center space-x-6 mr-10">
-                        <BsCart3 className="text-xl" />
+                        <NavLink to="/check-out">
+                            <BsCart3 className="text-xl" />
+                        </NavLink>
                         <div className="flex items-center">
                             <BiGlobe className="text-xl" />
                             <select className="py-1 w-[75px]">
@@ -135,7 +137,7 @@ const Header = () => {
                                 <option>Vietnamese</option>
                             </select>
                         </div>
-                        <BiBell className="text-xl" />
+                        <BiBell className="text-xl cursor-pointer" />
                         <div
                             className="flex items-center cursor-pointer"
                             onClick={toggleProfileDropdown}

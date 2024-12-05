@@ -37,7 +37,7 @@ const MyLearning = () => {
     };
 
     return (
-        <div className="max-w-7xl mx-auto p-6">
+        <div className="max-w-8xl p-6 mx-28">
             <h1 className="text-3xl font-semibold mb-6">My Learning</h1>
             <div className="flex space-x-4 mb-6">
                 <button
