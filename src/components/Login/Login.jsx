@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
+import { EMAIL } from "../../libs/constant";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -21,6 +22,7 @@ const Login = () => {
             setMessageType("error");
             setResponseMessage("Please fill all fields.");
         } else {
+            localStorage.setItem(EMAIL, JSON.stringify({ email: email }));
             setMessageType("success");
             setResponseMessage("Login successfully!");
         }

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import AccountRoutes from "./routes/AccountRoutes";
 import HomeRoutes from "./routes/HomeRoutes";
@@ -9,7 +9,7 @@ function App() {
         <Router>
             <Routes>
                 {AccountRoutes}
-                {HomeRoutes}
+                <Route path="/*" element={<HomeRoutes />} />
             </Routes>
         </Router>
     );
