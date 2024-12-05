@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { EMAIL } from "../../libs/constant";
 
@@ -10,6 +10,8 @@ const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
 
     const tooglePasswordSVisibility = () => {
         setShowPassword((prevState) => !prevState);
@@ -25,6 +27,7 @@ const Login = () => {
             localStorage.setItem(EMAIL, JSON.stringify({ email: email }));
             setMessageType("success");
             setResponseMessage("Login successfully!");
+            navigate("/");
         }
 
         setTimeout(() => {
