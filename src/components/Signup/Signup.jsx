@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 
 const Signup = () => {
@@ -10,6 +10,8 @@ const Signup = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
 
     const tooglePasswordSVisibility = () => {
         setShowPassword((prevState) => !prevState);
@@ -24,6 +26,7 @@ const Signup = () => {
         } else {
             setMessageType("success");
             setResponseMessage("Sign up complete! Waiting for redirect...");
+            navigate("/account/login");
         }
 
         setTimeout(() => {

@@ -52,7 +52,7 @@ const Header = () => {
 
     return (
         <header className="bg-white shadow-md">
-            <div className="max-w-9xl mx-auto px-4 py-5 flex items-center justify-between">
+            <div className="max-w-8xl px-4 py-5 flex items-center justify-between">
                 <div className="flex items-center ml-10">
                     {/* Logo */}
                     <NavLink
