@@ -70,7 +70,7 @@ const SearchResult = () => {
                                 </label>
                             </div>
                         ))}
-                        <p className="text-sm text-gray-400 underline">
+                        <p className="text-sm text-gray-400 underline cursor-pointer hover:text-gray-500">
                             Show 6 more
                         </p>
                     </div>
@@ -92,7 +92,7 @@ const SearchResult = () => {
                                 </label>
                             </div>
                         ))}
-                        <p className="text-sm text-gray-400 underline">
+                        <p className="text-sm text-gray-400 underline cursor-pointer hover:text-gray-500">
                             Show 23 more
                         </p>
                     </div>
@@ -100,7 +100,7 @@ const SearchResult = () => {
 
                 {/* Right section (result) */}
                 <div className="w-3/4 px-5">
-                    <h1 className="text-xl font-bold ml-10">
+                    <h1 className="text-xl font-bold ml-12">
                         Result for"{searchQuery}"
                     </h1>
 

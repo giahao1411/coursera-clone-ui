@@ -95,7 +95,7 @@ const Header = () => {
                                 onKeyDown={handleKeyDown}
                             />
                             <div className="border border-blue-600 bg-blue-600 text-white rounded-2xl p-1 text-xl absolute right-2 text-gray-500 cursor-pointer">
-                                <CiSearch />
+                                <CiSearch onClick={handleSearch} />
                             </div>
 
                             {isFocus && <SearchBoxDropDown />}
