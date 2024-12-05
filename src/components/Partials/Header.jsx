@@ -163,7 +163,7 @@ const Header = () => {
                         Home
                     </NavLink>
                     <NavLink
-                        to="/learn"
+                        to="/my-learning"
                         className={({ isActive }) =>
                             isActive ? "font-bold" : "hover:text-black"
                         }
