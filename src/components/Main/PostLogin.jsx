@@ -1,5 +1,6 @@
 import React from "react";
 import { BiSolidUserCircle } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const courseData = [
     {
@@ -37,6 +38,12 @@ const courseData = [
 ];
 
 const PostLogin = () => {
+    const navigate = useNavigate();
+
+    const courseDetail = () => {
+        navigate("/course-detail");
+    };
+
     return (
         <main>
             <div className="mt-10 -mb-6 ml-24">
@@ -48,6 +55,7 @@ const PostLogin = () => {
                     <div
                         key={index}
                         className="mx-3 w-80 bg-white max-w-xl border rounded-md py-5 px-4 flex flex-col cursor-pointer hover:bg-gray-50"
+                        onClick={courseDetail}
                     >
                         <img
                             src={course.imgSrc}

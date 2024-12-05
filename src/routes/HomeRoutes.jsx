@@ -12,6 +12,7 @@ import UserSetting from "../components/Main/UserSetting";
 import Purchases from "../components/Main/Purchases";
 import Checkout from "../components/Main/Checkout";
 import LearnCourse from "../components/Main/LearnCourse";
+import CourseDetail from "../components/Main/CourseDetail";
 
 const HomeRoutes = () => {
     const [user, setUser] = useState("");
@@ -38,8 +39,9 @@ const HomeRoutes = () => {
                 <Route path="/purchases" element={<Purchases />} />
                 <Route path="/check-out" element={<Checkout />} />
                 <Route path="/my-learning/course" element={<LearnCourse />} />
-            </Route >
-        </Routes >
+                <Route path="/course-detail" element={<CourseDetail />} />
+            </Route>
+        </Routes>
     );
 };
 
