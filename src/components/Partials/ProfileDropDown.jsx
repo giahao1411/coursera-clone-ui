@@ -15,7 +15,7 @@ const ProfileDropDown = ({ logout }) => {
                     <NavLink to="/setting">Settings</NavLink>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-md">
-                    <NavLink to="/help-center">Help center</NavLink>
+                    <NavLink to="/help-centre">Help centre</NavLink>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer rounded-md">
                     <NavLink to="/account/login" onClick={logout}>
