@@ -1,19 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiSolidUserCircle } from "react-icons/bi";
 import { AiOutlineDown } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { PiCertificateFill } from "react-icons/pi";
+import ProfileDropDown from "../Partials/ProfileDropDown";
 
 const HelpCentre = () => {
+    const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+
+    const toggleProfileDropdown = () => {
+        setIsProfileDropdownOpen((prevState) => !prevState);
+    };
+
+    const logout = () => {
+        localStorage.removeItem(EMAIL);
+        setIsProfileDropdownOpen(false);
+    };
+
     return (
         <div className="min-h-screen bg-blue-700 text-white">
             <header className="flex justify-between items-center p-6">
                 <h1 className="text-3xl font-semibold">COURSERA</h1>
-                <div className="flex items-center text-gray-800">
+                <div
+                    className="flex items-center text-gray-800 cursor-pointer mr-3"
+                    onClick={toggleProfileDropdown}
+                >
                     <BiSolidUserCircle className="text-4xl " />
                     <AiOutlineDown className="text-md ml-1" />
+
+                    {isProfileDropdownOpen && (
+                        <ProfileDropDown logout={logout} />
+                    )}
                 </div>
             </header>
 
