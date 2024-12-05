@@ -40,6 +40,7 @@ const Header = () => {
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
             handleSearch();
+            setIsFocus(false);
         }
     };
 

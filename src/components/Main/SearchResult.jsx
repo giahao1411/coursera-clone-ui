@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { BiSolidUserCircle } from "react-icons/bi";
 
 const subjects = [
@@ -45,6 +45,11 @@ const SearchResult = () => {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const searchQuery = queryParams.get("query");
+    const navigate = useNavigate();
+
+    const courseDetail = () => {
+        navigate("/course-detail");
+    };
 
     return (
         <main>
@@ -109,6 +114,7 @@ const SearchResult = () => {
                             <div
                                 key={index}
                                 className="mx-3 w-80 bg-white max-w-xl border rounded-md py-5 px-4 flex flex-col cursor-pointer hover:bg-gray-50"
+                                onClick={courseDetail}
                             >
                                 <img
                                     src={course.imgSrc}
