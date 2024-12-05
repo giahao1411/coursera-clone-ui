@@ -8,6 +8,7 @@ import Career from "../components/Main/Career";
 import SearchResult from "../components/Main/SearchResult";
 import MyLearning from "../components/Main/MyLearning";
 import UserProfile from "../components/Main/UserProfile";
+import UserSetting from "../components/Main/UserSetting";
 
 const HomeRoutes = () => {
     const [user, setUser] = useState("");
@@ -30,6 +31,7 @@ const HomeRoutes = () => {
                 <Route path="/search-result" element={<SearchResult />} />
                 <Route path="/my-learning" element={<MyLearning />} />
                 <Route path="/profile" element={<UserProfile />} />
+                <Route path="/setting" element={<UserSetting />} />
             </Route>
         </Routes>
     );
