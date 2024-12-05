@@ -11,6 +11,7 @@ import UserProfile from "../components/Main/UserProfile";
 import UserSetting from "../components/Main/UserSetting";
 import Purchases from "../components/Main/Purchases";
 import Checkout from "../components/Main/Checkout";
+import LearnCourse from "../components/Main/LearnCourse";
 
 const HomeRoutes = () => {
     const [user, setUser] = useState("");
@@ -36,6 +37,7 @@ const HomeRoutes = () => {
                 <Route path="/setting" element={<UserSetting />} />
                 <Route path="/purchases" element={<Purchases />} />
                 <Route path="/check-out" element={<Checkout />} />
+                <Route path="/my-learning/course" element={<LearnCourse />} />
             </Route >
         </Routes >
     );

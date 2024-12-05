@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 // const inProgressCourses = [];
 // const completedCourses = [];
@@ -42,21 +43,19 @@ const MyLearning = () => {
             <div className="flex space-x-4 mb-6">
                 <button
                     onClick={() => handleTabClick("inProgress")}
-                    className={`px-4 py-1 rounded-3xl text-lg ${
-                        activeTab === "inProgress"
-                            ? "bg-gray-500 text-white"
-                            : "bg-white border border-black text-black hover:bg-blue-500 hover:text-white"
-                    }`}
+                    className={`px-4 py-1 rounded-3xl text-lg ${activeTab === "inProgress"
+                        ? "bg-gray-500 text-white"
+                        : "bg-white border border-black text-black hover:bg-blue-500 hover:text-white"
+                        }`}
                 >
                     In Progress
                 </button>
                 <button
                     onClick={() => handleTabClick("completed")}
-                    className={`px-4 py-1 rounded-3xl text-lg ${
-                        activeTab === "completed"
-                            ? "bg-gray-500 text-white"
-                            : "bg-white border border-black text-black hover:bg-blue-500 hover:text-white"
-                    }`}
+                    className={`px-4 py-1 rounded-3xl text-lg ${activeTab === "completed"
+                        ? "bg-gray-500 text-white"
+                        : "bg-white border border-black text-black hover:bg-blue-500 hover:text-white"
+                        }`}
                 >
                     Completed
                 </button>
@@ -70,9 +69,8 @@ const MyLearning = () => {
                         </p>
                     ) : (
                         <div
-                            className={`grid grid-cols-2 gap-x-10 gap-y-5 justify-items-start ml-10 ${
-                                inProgressCourses.length <= 2 ? "pb-56" : ""
-                            }`}
+                            className={`grid grid-cols-2 gap-x-10 gap-y-5 justify-items-start ml-10 ${inProgressCourses.length <= 2 ? "pb-56" : ""
+                                }`}
                         >
                             {inProgressCourses.map((course, index) => (
                                 <div
@@ -90,9 +88,9 @@ const MyLearning = () => {
                                             {course.type}
                                         </p>
                                     </div>
-                                    <button className="mt-auto w-64 py-1 bg-gray-500 text-white rounded-2xl">
+                                    <NavLink to="/my-learning/course" className="mt-auto w-64 py-1 bg-gray-500 text-white text-center rounded-2xl">
                                         Continue
-                                    </button>
+                                    </NavLink>
                                 </div>
                             ))}
                         </div>
@@ -103,9 +101,8 @@ const MyLearning = () => {
                     </p>
                 ) : (
                     <div
-                        className={`grid grid-cols-2 gap-x-10 gap-y-5 justify-items-start ml-10 ${
-                            completedCourses.length <= 2 ? "pb-56" : ""
-                        }`}
+                        className={`grid grid-cols-2 gap-x-10 gap-y-5 justify-items-start ml-10 ${completedCourses.length <= 2 ? "pb-56" : ""
+                            }`}
                     >
                         {completedCourses.map((course, index) => (
                             <div
