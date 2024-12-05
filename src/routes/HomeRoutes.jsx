@@ -6,6 +6,7 @@ import PreLogin from "../components/Main/PreLogin";
 import PostLogin from "../components/Main/PostLogin";
 import Career from "../components/Main/Career";
 import SearchResult from "../components/Main/SearchResult";
+import UserProfile from "../components/Main/UserProfile";
 
 const HomeRoutes = () => {
     const [user, setUser] = useState("");
@@ -26,6 +27,8 @@ const HomeRoutes = () => {
                 />
                 <Route path="/careers" element={<Career />} />
                 <Route path="/search-result" element={<SearchResult />} />
+                <Route path="/profile" element={<UserProfile />} />
+
             </Route>
         </Routes>
     );

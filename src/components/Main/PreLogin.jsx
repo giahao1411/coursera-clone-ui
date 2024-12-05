@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const PreLogin = () => {
     return (
@@ -8,14 +9,14 @@ const PreLogin = () => {
                 <h1 className="text-4xl md:text-7xl font-bold text-black leading-tight">
                     Learn without limits
                 </h1>
-                <p className="mt-4 text-xl text-gray-600 max-w-xl mx-auto md:mx-0">
+                <p className="mt-4 mb-8 text-xl text-gray-600 max-w-xl mx-auto md:mx-0">
                     Start, switch, or advance your career with more than 7,000
                     courses, Professional Certificates, and degrees from
                     world-class universities and companies.
                 </p>
-                <button className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">
-                    Join for Free
-                </button>
+                <NavLink to="/account/signup" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">
+                    Join for free
+                </NavLink>
             </div>
 
             {/* Right section */}
