@@ -16,9 +16,9 @@ const UserProfile = () => {
                 <div className="px-6 py-4">
                     <div className="flex justify-between items-center">
                         <div className="font-bold text-2xl text-center w-full">Personal</div>
-                        <BiSolidPencil className="text-2xl -mr-5 -mt-3" onClick={toggleModal} />
+                        <BiSolidPencil className="text-2xl -mr-5 -mt-3 cursor-pointer" onClick={toggleModal} />
                     </div>
-                    <BiSolidUserCircle className="text-5xl" class="size-4/6 m-auto" />
+                    <BiSolidUserCircle className="text-5xl size-4/6 m-auto" />
                     <div className="font-bold text-xl text-center align-middle">User</div>
                     <div className="mt-2 text-sky-700 text-center underline">Profile's links</div>
                     <p className="text-gray-700 text-base mt-4 text-center">
@@ -63,7 +63,7 @@ const UserProfile = () => {
                     </div>
                 </div>
 
-                <ProfileModal isOpen={isOpen} />
+                <ProfileModal isOpen={isOpen} onClose={toggleModal} />
             </div>
         </div >
     );
