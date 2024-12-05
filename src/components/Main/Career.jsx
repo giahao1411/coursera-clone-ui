@@ -66,7 +66,7 @@ const Career = () => {
                     recognized by leading companies
                 </h3>
 
-                <div className="flex justify-center items-center mt-10">
+                <div className="flex justify-center items-center mt-10 pb-10">
                     {courseDetails.map((course, index) => (
                         <div
                             key={index}
