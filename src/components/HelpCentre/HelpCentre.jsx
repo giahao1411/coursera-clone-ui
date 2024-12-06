@@ -21,14 +21,31 @@ const HelpCentre = () => {
         setIsProfileDropdownOpen(false);
     };
 
+    const navigateHome = () => {
+        navigate("/");
+    };
+
+    const navigateToAccountQuestion = () => {
+        navigate("/help-centre/account-and-notification");
+    };
+
+    const navigateToPaymentQuestion = () => {
+        navigate("/help-centre/payment-and-subscriptions");
+    };
+
     const navigateToCertificateQuestion = () => {
-        navigate("/help-centre/certificate-question");
-    }
+        navigate("/help-centre/certificate-and-verification");
+    };
 
     return (
         <div className="min-h-screen bg-blue-700 text-white">
             <header className="flex justify-between items-center p-6">
-                <h1 className="text-3xl font-semibold">COURSERA</h1>
+                <h1
+                    className="cursor-pointer text-3xl font-semibold"
+                    onClick={navigateHome}
+                >
+                    COURSERA
+                </h1>
                 <div
                     className="flex items-center text-gray-800 cursor-pointer mr-3"
                     onClick={toggleProfileDropdown}
@@ -57,21 +74,30 @@ const HelpCentre = () => {
             </div>
 
             <div className="flex justify-center gap-10 mt-20 py-20 bg-white text-black text-center">
-                <div className="w-96 px-4 py-12 pb-16 border border-black flex flex-col items-center justify-center hover:bg-gray-100">
+                <div
+                    className="cursor-pointer w-96 px-4 py-12 pb-16 border border-black flex flex-col items-center justify-center hover:bg-gray-100"
+                    onClick={navigateToAccountQuestion}
+                >
                     <FaUser className="text-6xl" />
                     <p className="mt-4 font-semibold text-2xl">
                         Account & notifications
                     </p>
                 </div>
 
-                <div className="w-96 px-4 py-12 pb-16 border border-black flex flex-col items-center justify-center hover:bg-gray-100">
+                <div
+                    className="cursor-pointer w-96 px-4 py-12 pb-16 border border-black flex flex-col items-center justify-center hover:bg-gray-100"
+                    onClick={navigateToPaymentQuestion}
+                >
                     <FaShoppingCart className="text-6xl " />
                     <p className="mt-4 font-semibold text-2xl">
                         Payments & subscriptions
                     </p>
                 </div>
 
-                <div className="w-96 px-4 py-12 pb-16 border border-black flex flex-col items-center justify-center hover:bg-gray-100" onClick={navigateToCertificateQuestion}>
+                <div
+                    className="cursor-pointer w-96 px-4 py-12 pb-16 border border-black flex flex-col items-center justify-center hover:bg-gray-100"
+                    onClick={navigateToCertificateQuestion}
+                >
                     <PiCertificateFill className="text-6xl" />
                     <p className="mt-4 font-semibold text-2xl">
                         Certificates & verification
