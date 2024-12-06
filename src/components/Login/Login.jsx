@@ -27,12 +27,12 @@ const Login = () => {
             localStorage.setItem(EMAIL, JSON.stringify({ email: email }));
             setMessageType("success");
             setResponseMessage("Login successfully!");
-            navigate("/");
         }
 
         setTimeout(() => {
             setResponseMessage("");
             setMessageType("");
+            navigate("/");
         }, 3000);
     };
 

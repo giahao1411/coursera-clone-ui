@@ -26,12 +26,12 @@ const Signup = () => {
         } else {
             setMessageType("success");
             setResponseMessage("Sign up complete! Waiting for redirect...");
-            navigate("/account/login");
         }
 
         setTimeout(() => {
             setResponseMessage("");
             setMessageType("");
+            navigate("/account/login");
         }, 3000);
     };
 

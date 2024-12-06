@@ -19,12 +19,12 @@ const ForgotPassword = () => {
             setMessageType("success");
             setResponseMessage("A password link has been sent via your email.");
             localStorage.setItem(EMAIL, JSON.stringify({ email: email }));
-            navigate("/account/email-sent");
         }
 
         setTimeout(() => {
             setResponseMessage("");
             setMessageType("");
+            navigate("/account/email-sent");
         }, 3000);
     };
 
@@ -33,9 +33,16 @@ const ForgotPassword = () => {
             setMessageType("error");
             setResponseMessage("Please fill all fields.");
         } else {
+            setMessageType("success");
+            setResponseMessage("Please check your inbox");
             localStorage.setItem(EMAIL, JSON.stringify({ email }));
-            navigate("/account/check-inbox");
         }
+
+        setTimeout(() => {
+            setResponseMessage("");
+            setMessageType("");
+            navigate("/account/check-inbox");
+        }, 3000);
     };
 
     return (
