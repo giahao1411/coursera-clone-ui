@@ -6,8 +6,10 @@ import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { PiCertificateFill } from "react-icons/pi";
 import ProfileDropDown from "../Partials/ProfileDropDown";
+import { useNavigate } from "react-router-dom";
 
 const HelpCentre = () => {
+    const navigate = useNavigate();
     const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
     const toggleProfileDropdown = () => {
@@ -18,6 +20,10 @@ const HelpCentre = () => {
         localStorage.removeItem(EMAIL);
         setIsProfileDropdownOpen(false);
     };
+
+    const navigateToCertificateQuestion = () => {
+        navigate("/help-centre/certificate-question");
+    }
 
     return (
         <div className="min-h-screen bg-blue-700 text-white">
@@ -65,7 +71,7 @@ const HelpCentre = () => {
                     </p>
                 </div>
 
-                <div className="w-96 px-4 py-12 pb-16 border border-black flex flex-col items-center justify-center hover:bg-gray-100">
+                <div className="w-96 px-4 py-12 pb-16 border border-black flex flex-col items-center justify-center hover:bg-gray-100" onClick={navigateToCertificateQuestion}>
                     <PiCertificateFill className="text-6xl" />
                     <p className="mt-4 font-semibold text-2xl">
                         Certificates & verification

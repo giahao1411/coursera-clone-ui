@@ -7,7 +7,7 @@ const CourseDetail = () => {
     const navigate = useNavigate();
 
     const enrollCourse = () => {
-        navigate("/enroll-course");
+        navigate("/my-learning/course");
     };
 
     return (
