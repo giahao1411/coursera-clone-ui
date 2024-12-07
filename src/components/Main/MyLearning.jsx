@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-// const inProgressCourses = [];
+const inProgressCourses = [];
 // const completedCourses = [];
 
-const inProgressCourses = [
-    {
-        name: "JavaScript for Beginners",
-        type: "Certificate",
-    },
-    {
-        name: "React Basics",
-        type: "Certificate",
-    },
-];
+// const inProgressCourses = [
+//     {
+//         name: "JavaScript for Beginners",
+//         type: "Certificate",
+//     },
+//     {
+//         name: "React Basics",
+//         type: "Certificate",
+//     },
+// ];
 
 const completedCourses = [
     {

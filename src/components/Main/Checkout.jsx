@@ -58,7 +58,7 @@ const Checkout = () => {
 
     return (
         <main>
-            <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {/* Checkout section */}
                 <div>
                     <h1 className="text-3xl font-semibold mb-7">Checkout</h1>
